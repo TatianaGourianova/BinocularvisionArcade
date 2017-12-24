@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Layout 1</layout>
+        <layout order="2">control</layout>
+        <layout order="32">Menue</layout>
+        <layout order="33">Help</layout>
+        <event-sheet order="1">Event sheet 1</event-sheet>
+        <event-sheet order="3">Ev_control</event-sheet>
+        <event-sheet order="34">Ev_Menue</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Tank/" />
+        <folder expanded="1" path="animation-folder/cannon/" />
+        <folder expanded="1" path="animation-folder/Bullet/" />
+        <folder expanded="1" path="animation-folder/explosion/" />
+        <folder expanded="1" path="animation-folder/Reloadbar_back/" />
+        <folder expanded="1" path="animation-folder/Reloadbar_front/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/healbar_back/" />
+        <folder expanded="1" path="animation-folder/healbar_front/" />
+        <folder expanded="1" path="animation-folder/firerange/" />
+        <folder expanded="1" path="animation-folder/wall/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/scheme_moves/" />
+        <folder expanded="1" path="animation-folder/tankspawn/" />
+        <folder expanded="1" path="animation-folder/base/" />
+        <folder expanded="1" path="animation-folder/playerspawn/" />
+        <folder expanded="1" path="animation-folder/Triangle2/" />
+        <folder expanded="1" path="animation-folder/Dot/" />
+        <folder expanded="1" path="animation-folder/Dot2/" />
+        <folder expanded="1" path="animation-folder/home/" />
+        <folder expanded="1" path="animation-folder/Square/" />
+        <folder expanded="1" path="animation-folder/Triangle/" />
+        <folder expanded="1" path="animation-folder/Square2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Button_Play/" />
+        <folder expanded="1" path="animation-folder/Button_Help/" />
+        <folder expanded="1" path="animation-folder/Button_Options/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,1087 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="isplayerhere" sid="661548249703040" static="0" type="number">0</variable>
+        <variable constant="0" name="SwitchVisible4" sid="235792118752646" static="0" type="number">0</variable>
+        <variable constant="0" name="SwitchVisible3" sid="945985993721464" static="0" type="number">0</variable>
+        <variable constant="0" name="mintankid" sid="756046451866968" static="0" type="number">-4</variable>
+        <variable constant="0" name="maxtankid" sid="359824024423136" static="0" type="number">3</variable>
+        <variable constant="0" name="red_count" sid="886374509528107" static="0" type="number">4</variable>
+        <variable constant="0" name="blue_count" sid="780544228143058" static="0" type="number">4</variable>
+        <event-block sid="6806516777257774">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5301108136693411" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="5631935372038415" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">cannon.TankID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="2510141772537263" type="cannon">
+                    <param id="0" name="X">Tank.X</param>
+                </action>
+                <action id="-2" name="Set Y" sid="4465185873180742" type="cannon">
+                    <param id="0" name="Y">Tank.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="585858996728159">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="497309437593101" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="997940732599111">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="812405359348053" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="693114884460700" type="System">
+                            <param id="0" name="Seconds">1/12</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="712748997537372" type="Bullet">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="860110011221607" type="cannon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="945076541077253" type="Tank">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="423904344037939" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="902378443487366">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="690131221309631" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="165060668066806" type="Bullet">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="368886104922205" type="cannon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="348264034014583" type="Tank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="240596144572819" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3307097199877909">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7542201239128559" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="490960543297124" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="628039345519361" type="cannon">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="2438299879081984" type="cannon">
+                    <param id="0" name="Target">Tank</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="370598342563052">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="310700007753284" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="120383774142958" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="814530245540790" type="cannon">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="0" name="Acquire target" sid="368493792566186" type="cannon">
+                    <param id="0" name="Target">Tank</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7391177561811494">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="870767374069311" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="1392249595864912" type="cannon">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="1666805450846067" type="cannon">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4272706083405999">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6157849879975612" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="632504721344592" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="2692454644314614" type="Tank">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="786474909659816" title="Tank movement">
+            <sub-events>
+                <event-block sid="2488390833921493">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1016629555152461" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="306359887346273" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="5292499990972612" type="Tank">
+                            <param id="0" name="X">random(10,1700)</param>
+                            <param id="1" name="Y">random(10,950)</param>
+                        </action>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="5973311848324594" type="Tank" />
+                    </actions>
+                </event-block>
+                <event-block sid="4090922601103417">
+                    <conditions>
+                        <condition behavior="Car" id="1" name="Compare speed" sid="4706755037757399" type="Tank">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">-20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="3" name="Set speed" sid="2435951872802912" type="Tank">
+                            <param id="0" name="Speed">-20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6418477544222617">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1044382170405535" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="329757259580585" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" sid="4526597223469627" type="Tank">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3501489565281155">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1642548099716174" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="694119398701415" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" sid="8244770607401042" type="Tank">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7215245634646565">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="5367355625827397" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4050911577942959" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" sid="5564592892972938" type="Tank">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9253108078223352">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6039192508052616" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5070417172792467" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Car" id="7" name="Simulate control" sid="5374107519650349" type="Tank">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="134539708533232">
+                    <conditions>
+                        <condition behavior="Car" id="1" name="Compare speed" sid="421380112026462" type="Tank">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">20</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="354318366695982" type="Tank">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="196436296823211">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="712449282249264" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-19" name="Rotate counter-clockwise" sid="893212123582716" type="Tank">
+                                    <param id="0" name="Degrees">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="629571129028591">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="598434251497278" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Rotate clockwise" sid="797911620236370" type="Tank">
+                                    <param id="0" name="Degrees">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3357732478184436" title="Shell physics">
+            <sub-events>
+                <event-block sid="4098394622938006">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="7096254755292858" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9910682691358203" type="cannon">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2886712082109946" type="cannon">
+                            <param id="0" name="Instance variable">reload_val</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4707216898171117" type="cannon">
+                            <param id="0" name="Object">Bullet</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2151224378826812" type="cannon">
+                            <param id="0" name="Instance variable">reload_val</param>
+                            <param id="1" name="Value">cannon.reload_time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3660273320651598">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7084995842962346" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="2665775685130516" type="cannon">
+                            <param id="0" name="Instance variable">reload_val</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="2592030729850141" type="cannon">
+                            <param id="0" name="Instance variable">reload_val</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2512627503388606">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5593691469033805" type="Bullet">
+                            <param id="0" name="Object">Tank</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1077119694976896" type="Bullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6517668041711804" type="explosion">
+                            <param id="0" name="Instance variable">Caster</param>
+                            <param id="1" name="Value">Bullet.Caster</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6726592778895325" type="Bullet" />
+                        <action id="-10" name="Set value" sid="4579988940894248" type="explosion">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">58</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8421634165353255">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2230838042783306" type="Bullet">
+                            <param id="0" name="Object">wall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8202625919398717" type="Bullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8081749218805453" type="explosion">
+                            <param id="0" name="Instance variable">Caster</param>
+                            <param id="1" name="Value">Bullet.Caster</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8140662084288065" type="Bullet" />
+                        <action id="-10" name="Set value" sid="4771905612109562" type="explosion">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">58</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889006498947509">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="354350938058637" type="Bullet">
+                            <param id="0" name="Object">base</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="429837330919777" type="Bullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="296896473715924" type="explosion">
+                            <param id="0" name="Instance variable">Caster</param>
+                            <param id="1" name="Value">Bullet.Caster</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="685614009930635" type="Bullet" />
+                        <action id="-10" name="Set value" sid="747053463354662" type="explosion">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">58</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4233386626874035">
+                    <conditions>
+                        <condition behavior="Turret" id="1" name="On shoot" sid="8922135346265283" type="cannon" />
+                        <condition id="-7" name="Compare instance variable" sid="1406553950259705" type="cannon">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="688762768100252" type="cannon">
+                            <param id="0" name="Object">Bullet</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5964566374238114" type="Bullet">
+                            <param id="0" name="Instance variable">Caster</param>
+                            <param id="1" name="Value">cannon.TankID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4931925330017479">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1530129072627271" type="Tank">
+                            <param id="0" name="Object">explosion</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="4119723581695128" type="Tank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">explosion.Damage*random(2,4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9045787099471499" type="Tank">
+                            <param id="0" name="Instance variable">Last_hit</param>
+                            <param id="1" name="Value">explosion.Caster</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2272919190410773">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1454636602867175" type="Tank">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6945719418699323" type="cannon">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Tank.TankID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5736032010796796" type="healbar_back">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Tank.TankID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4178685149179546" type="healbar_front">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Tank.TankID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8643046184109876" type="Tank">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="7453964946250889" type="explosion">
+                            <param id="0" name="Width">100</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="5037927538879686" type="explosion">
+                            <param id="0" name="Height">100</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="585185779337424" type="Tank" />
+                        <action id="-10" name="Set value" sid="3146150496950874" type="explosion">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9778398597679219" type="cannon" />
+                        <action id="-9" name="Destroy" sid="9072664471735676" type="healbar_back" />
+                        <action id="-9" name="Destroy" sid="3577439839706041" type="healbar_front" />
+                        <action id="1" name="Append text" sid="3687622512566071" type="KillsLog">
+                            <param id="0" name="Text">Tank.Last_hit&amp;&quot; killed &quot;&amp;Tank.TankID&amp;newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="633362380187168">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="172710179302936" type="Tank">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="107326935809426" type="System">
+                                    <param id="0" name="Variable">red_count</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="110551007275506">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="671361152846983" type="Tank">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="620609439353991" type="System">
+                                    <param id="0" name="Variable">blue_count</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6041026913760842">
+                    <conditions>
+                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="5306013880388188" type="Bullet">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Distance">250</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7945717528888095" type="Bullet">
+                            <param id="0" name="Object">explosion</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3466166327483085" type="explosion">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">58</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2848148116755352" type="explosion">
+                            <param id="0" name="Instance variable">Caster</param>
+                            <param id="1" name="Value">bullet.Caster</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3906623698348255" type="Bullet" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2052125278736623" title="Info animations">
+            <sub-events>
+                <event-block sid="440950377483336">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="815649017881599" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2895612064040219">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3569119943789824" type="Tank">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">healbar_back.TankID</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8223311753565597" type="Tank">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">healbar_front.TankID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="2479621936913808" type="healbar_back">
+                                    <param id="0" name="X">Tank.X-13</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="964319276804902" type="healbar_back">
+                                    <param id="0" name="Y">Tank.Y-8</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="9842050548538191" type="healbar_front">
+                                    <param id="0" name="X">Tank.X-13</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="6887029750872264" type="healbar_front">
+                                    <param id="0" name="Y">Tank.Y-8</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="5271789797776527" type="healbar_front">
+                                    <param id="0" name="Width">Tank.health/Tank.maxhealth*25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6467389769421846">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9956367037852878" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="8509488169877668" type="cannon">
+                            <param id="0" name="Instance variable">TankID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="7398999261247809" type="Reloadbar_front">
+                            <param id="0" name="Width">(cannon.reload_time-cannon.reload_val)/cannon.reload_time*250</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121949250791615">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="815338225572175" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="747209579141678" type="statusbar">
+                            <param id="0" name="Text">&quot;Blue:&quot;&amp;blue_count&amp;newline&amp;&quot;Red:&quot;&amp;red_count&amp;newline&amp;&quot;Time to help:&quot;&amp;int((base.Timer.Duration(&quot;spawn_help&quot;)-base.Timer.CurrentTime(&quot;spawn_help&quot;)))&amp;&quot;sec.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="439393668883142" title="Spwning control">
+            <sub-events>
+                <event-block sid="972941722349695">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="499630539682255" type="base">
+                            <param id="0" name="Tag">&quot;spawn_help&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="706592729218489" type="KillsLog">
+                            <param id="0" name="Text">&quot;Help summoned&quot;&amp;newline</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="342765889798980" type="System">
+                            <param id="0" name="Variable">blue_count</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="756998911423482" type="System">
+                            <param id="0" name="Variable">red_count</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="222545940592857">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="486804137655555" type="base">
+                                    <param id="0" name="Instance variable">baseID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="170140988599122">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="782909430104551" type="System">
+                                            <param id="0" name="Variable">isplayerhere</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="409296945271897" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="326437170212428" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="431958932236658" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="827851610231140" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="827736291608909" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="158161200946379" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="555900888735203" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">3</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="158125457037204" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="634540946235020" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="298588678601069" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">4</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="167903487740307" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="970281843624027" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="332608441626677">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="297500274916838" type="System">
+                                            <param id="0" name="Variable">isplayerhere</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="930351108305104" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="518938236836403" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="653255415161989" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="415414414242899" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="826663132582711" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="417281405929979" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="661323220556782" type="base">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">3</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="109950211341547" type="System">
+                                            <param id="0" name="Variable">maxtankid</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="645966937748567" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">maxtankid</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="544975315314641" type="playerspawn">
+                                            <param id="0" name="Object">tankspawn</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">4</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="961653609569107" type="tankspawn">
+                                            <param id="0" name="Instance variable">TankID</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="796181303178316">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="657633021999874" type="base">
+                                    <param id="0" name="Instance variable">baseID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="748296130703179" type="base">
+                                    <param id="0" name="Object">tankspawn</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="651862645989102" type="System">
+                                    <param id="0" name="Variable">mintankid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="402087164833681" type="tankspawn">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Value">mintankid</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="233519730875083" type="base">
+                                    <param id="0" name="Object">tankspawn</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="968087395762880" type="System">
+                                    <param id="0" name="Variable">mintankid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="629265958107248" type="tankspawn">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Value">mintankid</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="588637601989417" type="base">
+                                    <param id="0" name="Object">tankspawn</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">3</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="397353285790233" type="System">
+                                    <param id="0" name="Variable">mintankid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="970871580659169" type="tankspawn">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Value">mintankid</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="995636163043447" type="base">
+                                    <param id="0" name="Object">tankspawn</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">4</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="662952101358082" type="System">
+                                    <param id="0" name="Variable">mintankid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="445195158512257" type="tankspawn">
+                                    <param id="0" name="Instance variable">TankID</param>
+                                    <param id="1" name="Value">mintankid</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6175813236967351">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="170016665067378" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="7" name="Set rate of fire" sid="3604448849574892" type="cannon">
+                    <param id="0" name="Rate of fire">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="1902060346153129" type="cannon">
+                    <param id="0" name="Instance variable">reload_time</param>
+                    <param id="1" name="Value">40</param>
+                </action>
+                <action behavior="Turret" id="10" name="Set target mode" sid="6476367888572245" type="cannon">
+                    <param id="0" name="Target">0</param>
+                </action>
+                <action behavior="Turret" id="6" name="Set range" sid="5570275307968088" type="cannon">
+                    <param id="0" name="Range">250</param>
+                </action>
+                <action id="-10" name="Set value" sid="7362148237654369" type="Tank">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-10" name="Set value" sid="3766466198766032" type="Tank">
+                    <param id="0" name="Instance variable">maxhealth</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action behavior="Car" id="9" name="Set steer speed" sid="371145980383330" type="Tank">
+                    <param id="0" name="Steer speed">80</param>
+                </action>
+                <action behavior="Pathfinding" id="10" name="Set rotate speed" sid="579220878138545" type="Tank">
+                    <param id="0" name="Rotate speed">80</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="890705198457445" type="base">
+                    <param id="0" name="Duration">60</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;spawn_help&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4523032938715448">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4882996556958466" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="7652634098363172" type="cannon">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="369890745467252" type="cannon">
+                    <param id="0" name="Object">firerange</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="285778024536008">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="427029390877291" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="116402015309579" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="221144765913831" type="Tank">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="2" name="Stop" sid="733135073744598" type="Tank" />
+            </actions>
+        </event-block>
+        <event-block sid="620107036919651">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="312205111655703" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="860799739655338" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="967208038884565" type="Tank">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="2" name="Stop" sid="589358205304465" type="Tank" />
+            </actions>
+        </event-block>
+        <event-block sid="946694675610202">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="545537548132082" type="System" />
+                <condition id="-9" name="Is visible" sid="355676383835600" type="tankspawn" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="154173307034668" type="tankspawn">
+                    <param id="0" name="Object">Tank</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="771916518863370" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Value">tankspawn.TankID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="723605155982429" type="tankspawn">
+                    <param id="0" name="Object">cannon</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="569101537760431" type="cannon">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Value">tankspawn.TankID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="340627638121268" type="tankspawn">
+                    <param id="0" name="Object">healbar_back</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="280367159908252" type="healbar_back">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Value">tankspawn.TankID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="224773703548767" type="tankspawn">
+                    <param id="0" name="Object">healbar_front</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="592656050566097" type="healbar_front">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Value">tankspawn.TankID</param>
+                </action>
+                <action id="-9" name="Destroy" sid="775975038170764" type="tankspawn" />
+            </actions>
+        </event-block>
+        <event-block sid="590110091560283">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="301185454111155" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="727397989996292" type="Tank">
+                    <param id="0" name="Instance variable">TankID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="470421464100390" type="System">
+                    <param id="0" name="Variable">isplayerhere</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129406903514879">
+            <conditions>
+                <condition id="-22" name="Else" sid="932550562516231" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="321464842626481" type="System">
+                    <param id="0" name="Variable">isplayerhere</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="559359263957790">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="485662466270977" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="940923461122389">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="162948151160770" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="148957459948994" type="System">
+                            <param id="0" name="Seconds">1/12</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="292916768431667" type="Bullet">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="950011321756116" type="cannon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="117623334481831" type="Tank">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="876264343186714" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="564490533705045">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="359558073036460" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="101408136752774" type="Bullet">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="339087036624231" type="cannon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="292769250608505" type="Tank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="554502796803358" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Ev_control</name>
+    <events>
+        <variable constant="0" name="SwitchVisible2" sid="582098088802630" static="0" type="number">0</variable>
+        <variable constant="0" name="SwitchVisible" sid="952324564102570" static="0" type="number">0</variable>
+        <variable constant="0" name="Switch" sid="824280234484823" static="0" type="number">0</variable>
+        <variable constant="0" name="Green" sid="578702640132617" static="0" type="number">0</variable>
+        <variable constant="0" name="Green2" sid="227893192909911" static="0" type="number">0</variable>
+        <variable constant="0" name="Red" sid="827192572494088" static="0" type="number">0</variable>
+        <variable constant="0" name="Red2" sid="597034716174213" static="0" type="number">0</variable>
+        <variable constant="0" name="Blue" sid="461854031209639" static="0" type="number">0</variable>
+        <variable constant="0" name="Blue2" sid="897258877702335" static="0" type="number">0</variable>
+        <event-block sid="324202336738335">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="207469909191364" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="905914748900209" type="System">
+                    <param id="0" name="Width">1708</param>
+                    <param id="1" name="Height">960</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="819594821946556">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="490155828088348" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="309168419897997">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="226404109361350" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="951444283544131" type="System">
+                            <param id="0" name="Seconds">1/12</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="675285599645188" type="Bullet">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="663026656471513" type="cannon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="389836881369489" type="Tank">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="703822982318456" type="System">
+                            <param id="0" name="Variable">SwitchVisible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="346760357924291">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="498414659815842" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="617582659768916" type="Bullet">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="671772655752897" type="cannon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="368350331523767" type="Tank">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="591686669254726" type="System">
+                    <param id="0" name="Variable">SwitchVisible</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="757040975987340">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="301442524366514" type="System">
+                    <param id="0" name="Variable">SwitchVisible2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block any="1" sid="266436497905792">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="248305599961514" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">home</param>
+                </condition>
+                <condition id="3" name="On touched object" sid="463124452587905" type="Touch">
+                    <param id="0" name="Object">home</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="378516223815827" type="System">
+                    <param id="0" name="Layout">&quot;Menue&quot;</param>
+                </action>
+                <action id="0" name="Set item" sid="316526631588677" type="LocalStorage">
+                    <param id="0" name="Key">&quot;color1&quot;</param>
+                    <param id="1" name="Value">&quot;Color1.AsJSON&quot;</param>
+                </action>
+                <action id="0" name="Set item" sid="565569763539399" type="LocalStorage">
+                    <param id="0" name="Key">&quot;color2&quot;</param>
+                    <param id="1" name="Value">&quot;Color2.AsJSON&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="508557037361603">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="924769325240355" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite3</param>
+                </condition>
+                <condition id="3" name="On touched object" sid="610729170648487" type="Touch">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="858668936431134" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="647090701236542">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="950817026018034" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="945288707245776" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769015971069504">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="389160737611409" type="System">
+                    <param id="0" name="Variable">Switch</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="916060510350044" type="Sprite3">
+                    <param id="0" name="Animation">&quot;off&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="957527530126738" type="Square">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="213048741153406" type="Square2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="Right filtr of 3D glasses" sid="689401894893245" title="Right">
+            <sub-events>
+                <event-block sid="549392972076780">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="880800760236638" type="Touch">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="487047449339328" type="System">
+                            <param id="0" name="Variable">Green2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(1),Triangle2.ImagePointY(1),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="990861583022400" type="System">
+                            <param id="0" name="Variable">Red2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(2),Triangle2.ImagePointY(2),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="959579856685020" type="System">
+                            <param id="0" name="Variable">Blue2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(3),Triangle2.ImagePointY(3),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489585847163685">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="383182349611443" type="Mouse">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="995728711479566" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="317666674261894" type="System">
+                            <param id="0" name="Variable">Green2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(1),Triangle2.ImagePointY(1),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="192218144109850" type="System">
+                            <param id="0" name="Variable">Red2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(2),Triangle2.ImagePointY(2),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="204484521269426" type="System">
+                            <param id="0" name="Variable">Blue2</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(3),Triangle2.ImagePointY(3),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="746647298928176">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="176952716692596" type="Mouse">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="888432717671289" type="Touch">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="290829084418675" type="Dot2">
+                            <param id="0" name="Object">Triangle2</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536145539607576">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="530318549810887" type="System" />
+                        <condition id="7" name="Cursor is over object" sid="955145484409085" type="Mouse">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="575741953326626" type="Dot2">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517802764245698">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="801759067277472" type="System" />
+                        <condition id="4" name="Is touching object" sid="667363562487737" type="Touch">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="481866189278164" type="Dot2">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="984562397641822">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="152886773479418" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="948321347031827" type="Color2">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Red2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="409539206009359" type="Color2">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">Green2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="431731243073665" type="Color2">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Blue2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="328807270499212" type="Square2">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">Red2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="464904117962276" type="Square2">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">Green2</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="250478783075080" type="Square2">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">Blue2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Right filtr of 3D glasses" sid="472304504321511" title="Right2">
+            <sub-events>
+                <event-block sid="773075678696211">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="336418817669536" type="Touch">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="179921257476028" type="System">
+                            <param id="0" name="Variable">Green</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(1),Triangle2.ImagePointY(1),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="749981147347832" type="System">
+                            <param id="0" name="Variable">Red</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(2),Triangle2.ImagePointY(2),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="160164289331588" type="System">
+                            <param id="0" name="Variable">Blue</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(3),Triangle2.ImagePointY(3),Touch.X,Touch.Y)-410)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="209163462027014">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="658199322328658" type="Mouse">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="594104977065647" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="206945638745087" type="System">
+                            <param id="0" name="Variable">Green</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(1),Triangle2.ImagePointY(1),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="529762880234861" type="System">
+                            <param id="0" name="Variable">Red</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(2),Triangle2.ImagePointY(2),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="131480951466032" type="System">
+                            <param id="0" name="Variable">Blue</param>
+                            <param id="1" name="Value">-0.555*(distance(Triangle2.ImagePointX(3),Triangle2.ImagePointY(3),Mouse.X,Mouse.Y)-410)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="495968275708009">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="934273387745371" type="Mouse">
+                            <param id="0" name="Object">Triangle</param>
+                        </condition>
+                        <condition id="3" name="On touched object" sid="650484050773472" type="Touch">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="474250896826017" type="Dot">
+                            <param id="0" name="Object">Triangle</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107430273225314">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="195465491348363" type="System" />
+                        <condition id="7" name="Cursor is over object" sid="131845230448370" type="Mouse">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="980816200314453" type="Dot">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="464637930573924">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="647122058480278" type="System" />
+                        <condition id="4" name="Is touching object" sid="227902584257705" type="Touch">
+                            <param id="0" name="Object">Triangle2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="650131997385278" type="Dot">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319311335053189">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="659333542443536" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="203162713153662" type="Color1">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Red</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="902712620485944" type="Color1">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">Green</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="356692822145225" type="Color1">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Blue</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="235524726962026" type="Square">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">Red</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="614686642263857" type="Square">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">Green</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="959063629730083" type="Square">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">Blue</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

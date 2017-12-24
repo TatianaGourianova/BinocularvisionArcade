@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>Help</name>
+    <sid>220454980135384</sid>
+    <event-sheet></event-sheet>
+    <size>
+        <width>1708</width>
+        <height>960</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>0</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0" sid="755105643057095">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="home" uid="41">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1614</x>
+                        <y>858</y>
+                        <z>0</z>
+                        <width>170</width>
+                        <height>170</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501831532</hotspotX>
+                        <hotspotY>0.501831532</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text4" uid="55">
+                    <properties>
+                        <text>1. Scope of medical games   (hereinafter — the product) for the training and rehabilitation of disorders of binocular (including stereoscopic) and monocular vision (with strabismus and amblyopia), the prevention of these disorders in healthy individuals, as well as As developing games for the stimulation of sensory-motor mechanisms and improve coordination and logical thinking in children of preschool and school age. 2. It is used in the home, health care and specialized institutions. 3. The principle of therapeutic products based on the effects of the division of the fields of stereo glasses. The object of observation represented as a dynamic game situation (the game) on the screen. The colors correspond to the colors of objects game filters glasses, with objects seen with one eye are invisible to others. Therefore, the decision of the game problem is possible only while distinguishing all objects game that includes gameplay both eyes of the patient, training and restoring binocular vision disorders and improving visual acuity in amblyopia (lazy eye). Additional stimulation of the visual analyzer is achieved by a flickering object game with an optimal frequency. Soundtrack of the game, and the use of PC keyboard, include the process of training an additional motor-sensory functionality of the patient, methods of increasing the efficiency of exercise. 4. In the treatment of amblyopia stereo glasses  are not needed. 5. Studies in leading honey. institutions RB clinical trials have shown high efficacy methods (after 10 treatment sessions in amblyopia visual acuity improved by an average of 0,11 ± 0.01; fusional reserves widened by an average of 6,5 ± 0,73 prism diopters). The recommended time of one session of the game for preschool children (3-6 years) is not more than 10 min., For pupils no more than 15 minutes.Contra: Absolute contraindications are absent. A relative contraindication to the use of the product is the presence of the patient&apos;s malignant disease and epilepsy.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-29,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>40</x>
+                        <y>97</y>
+                        <z>0</z>
+                        <width>1628</width>
+                        <height>751</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text5" uid="56">
+                    <properties>
+                        <text>Authors: D. Gourianov, R. Svistunov</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-24,700,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1045</x>
+                        <y>845</y>
+                        <z>0</z>
+                        <width>444</width>
+                        <height>75</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text6" uid="57">
+                    <properties>
+                        <text>Treatment of binocular vision disorders and amblyopia (lazy eye) </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-35,700,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>302</x>
+                        <y>10</y>
+                        <z>0</z>
+                        <width>1201</width>
+                        <height>61</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>
