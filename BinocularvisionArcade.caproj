@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>BinocularvisionArcade</name>
+    <description>arcade</description>
+    <version>2.1.</version>
+    <author>CSCTeam</author>
+    <author-email>tgourianova@mail.ru</author-email>
+    <author-website>http://csc.minsk.by</author-website>
+    <app-id>binocularvision.treatment.tanks</app-id>
+    <unique-id>3dj191nl83ho0</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra &amp; Ludei" id="CJSAds" version="1">CocoonJS</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Car" version="1">Car</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>control</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Tank" sid="7693511720901154">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TankID" sid="4124357227837896" type="number" />
+                <instance-variable name="TargetID" sid="7831175792080964" type="number" />
+                <instance-variable name="health" sid="4570308557897481" type="number" />
+                <instance-variable name="maxhealth" sid="7284049124167041" type="number" />
+                <instance-variable name="Last_hit" sid="3972367249525533" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Car" sid="1539148745297911">
+                    <behavior id="Car" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="914598265004403">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="1862298045019465">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="3923025878809614">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="189123327046949">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2500895486376927" speed="5">
+                    <frame duration="1" hotspotX="0.654822" hotspotY="0.489051" original-source="D:\binocularvision_dec\tanki\tank2.PNG" />
+                    <frame duration="1" hotspotX="0.502591" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cannon" sid="1815886178097138">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TankID" sid="7869231636417008" type="number" />
+                <instance-variable name="reload_time" sid="8217818525813259" type="number" />
+                <instance-variable name="reload_val" sid="3476812189963722" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Turret" sid="2288528285117591">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6077001033896461" speed="5">
+                    <frame duration="1" hotspotX="-0.00414938" hotspotY="0.475" original-source="D:\binocularvision_dec\tanki\dulo.png">
+                        <image-point name="Imagepoint 1" x="0.995851" y="0.475" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="843458950173134">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Keyboard" sid="9471386013332973">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TiledBackground" sid="3169065365187533">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\binocularvision_dec\tanki\grass.PNG" />
+        </object-type>
+        <object-type name="Bullet" sid="8354419343040047">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Caster" sid="2155101541866211" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="1700978046036222">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9157114268879116" speed="5">
+                    <frame duration="1" hotspotX="0.909091" hotspotY="0.681818" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="explosion" sid="107769731775435">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Caster" sid="6561121606710251" type="number" />
+                <instance-variable name="Damage" sid="4500920182423209" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="8921483999636367">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4841652021977962" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.598039">
+                        <collision-poly>
+                            <point x="0.156863" y="0.147059" />
+                            <point x="0.269608" y="0.0392157" />
+                            <point x="0.5" y="0" />
+                            <point x="0.691176" y="0.0490196" />
+                            <point x="0.852941" y="0.156863" />
+                            <point x="0.921568" y="0.29902" />
+                            <point x="1" y="0.5" />
+                            <point x="0.960784" y="0.70098" />
+                            <point x="0.823529" y="0.843137" />
+                            <point x="0.691176" y="0.941176" />
+                            <point x="0.5" y="1" />
+                            <point x="0.318627" y="0.960784" />
+                            <point x="0.176471" y="0.843137" />
+                            <point x="0.0588235" y="0.710784" />
+                            <point x="0" y="0.5" />
+                            <point x="0.0392157" y="0.289216" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Reloadbar_back" sid="8587972116012203">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="8838729512998523">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7594104537484478" speed="5">
+                    <frame duration="1" hotspotX="-0.004" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Reloadbar_front" sid="5740294161886327">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4300998802066357">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8760457202864939" speed="5">
+                    <frame duration="1" hotspotX="-0.004" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="952219624389062">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="3907199501036442">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1471892847053598" speed="5">
+                    <frame duration="1" hotspotX="0.477178" hotspotY="0.386364" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="healbar_back" sid="8836466372851086">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TankID" sid="7029657261239582" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7108042261600962" speed="5">
+                    <frame duration="1" hotspotX="-0.004" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="healbar_front" sid="586686648265671">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TankID" sid="7911365425878424" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1104596462308593" speed="5">
+                    <frame duration="1" hotspotX="-0.004" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KillsLog" sid="9648757642029373">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9719658496675007">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="firerange" sid="382688601680975">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="2827529264972154">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8118454029967779" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wall" sid="7093433465084484">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1656015599457535">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8847289628112344" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\binocularvision_dec\tanki\wall.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="578024772597626">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232605975678632" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="681492950005980">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="statusbar" sid="211810359808793">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="544769610409756">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="scheme_moves" sid="157441928342719">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="872712033460255">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948791422716060" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\binocularvision_dec\tanki\menage.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tankspawn" sid="394189374356836">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TankID" sid="728858582024603" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154780672127235" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="base" sid="991521330980461">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="baseID" sid="238356510242729" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="114274546385185">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="533071235106020">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208208646978153" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\binocularvision_dec\tanki\wall.PNG">
+                        <image-point name="Imagepoint 1" x="0.44" y="0.224138" />
+                        <image-point name="Imagepoint 2" x="0.852" y="0.22069" />
+                        <image-point name="Imagepoint 3" x="0.452" y="0.768966" />
+                        <image-point name="Imagepoint 4" x="0.848" y="0.765517" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.1" />
+                            <point x="0.236" y="0.102" />
+                            <point x="0.238" y="0.371" />
+                            <point x="1" y="0.3615" />
+                            <point x="1" y="0.60475" />
+                            <point x="0.228" y="0.610375" />
+                            <point x="0.238" y="0.877187" />
+                            <point x="1" y="0.886594" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="playerspawn" sid="753947001454620">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="548165322241171" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Triangle2" sid="885801830736448">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="222051031656815" speed="5">
+                    <frame duration="1" hotspotX="0.496094" hotspotY="0.65237" original-source="D:\Users\TORMOzZ\Загрузки\Треугольник2.png">
+                        <image-point name="Imagepoint 1" x="1.01758" y="1.01806" />
+                        <image-point name="Imagepoint 2" x="0.5" y="-0.0180587" />
+                        <image-point name="Imagepoint 3" x="-0.0175781" y="1.02257" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dot" sid="936518590346758">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480353994868123" speed="5">
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.48" original-source="C:\Users\Administrator\Desktop\для отсылки\щас перенесу и удалю\Animations\Sprite35\Default\000.png">
+                        <collision-poly>
+                            <point x="0.436" y="0.436" />
+                            <point x="0.5" y="0.396" />
+                            <point x="0.568" y="0.432" />
+                            <point x="0.58" y="0.5" />
+                            <point x="0.544" y="0.544" />
+                            <point x="0.5" y="0.556" />
+                            <point x="0.46" y="0.54" />
+                            <point x="0.428" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dot2" sid="425687128014815">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116096184278724" speed="5">
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.48" original-source="C:\Users\Administrator\Desktop\для отсылки\щас перенесу и удалю\Animations\Sprite35\Default\000.png">
+                        <collision-poly>
+                            <point x="0.436" y="0.436" />
+                            <point x="0.5" y="0.396" />
+                            <point x="0.568" y="0.432" />
+                            <point x="0.58" y="0.5" />
+                            <point x="0.544" y="0.544" />
+                            <point x="0.5" y="0.556" />
+                            <point x="0.46" y="0.54" />
+                            <point x="0.428" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="home" sid="185379840113342">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826904430358905" speed="5">
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501832" original-source="D:\Users\TORMOzZ\Мои документы\Few Adventure\Button_Hom.png">
+                        <collision-poly>
+                            <point x="0.150183" y="0.150183" />
+                            <point x="0.498168" y="0" />
+                            <point x="0.849817" y="0.150183" />
+                            <point x="1" y="0.498168" />
+                            <point x="0.849817" y="0.849817" />
+                            <point x="0.498168" y="1" />
+                            <point x="0.150183" y="0.849817" />
+                            <point x="0" y="0.498168" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Square" sid="332938212834699">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903175892548282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Triangle" sid="586835378567601">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871614571497482" speed="5">
+                    <frame duration="1" hotspotX="0.492188" hotspotY="0.656885" original-source="D:\Users\TORMOzZ\Загрузки\Треугольник2.png">
+                        <image-point name="Imagepoint 1" x="1.00977" y="1.01354" />
+                        <image-point name="Imagepoint 2" x="0.498047" y="-0.013544" />
+                        <image-point name="Imagepoint 3" x="-0.0175781" y="1.01354" />
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Square2" sid="548060122390538">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="868948172750790" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="939441728639723">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite3" sid="986538052812599">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="449179695943531" speed="5">
+                    <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="D:\binocularvision_dec\tanki\on.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.397436" />
+                            <point x="0.666667" y="0.397436" />
+                            <point x="0.924731" y="0.5" />
+                            <point x="0.913979" y="0.897436" />
+                            <point x="0.494624" y="0.987179" />
+                            <point x="0.0860215" y="0.897436" />
+                            <point x="0.0752688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="D:\binocularvision_dec\tanki\Новая папка (2)\Animations\Sprite3\off\001.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.397436" />
+                            <point x="0.494624" y="0.025641" />
+                            <point x="0.666667" y="0.397436" />
+                            <point x="0.924731" y="0.5" />
+                            <point x="0.913979" y="0.897436" />
+                            <point x="0.494624" y="0.987179" />
+                            <point x="0.0860215" y="0.897436" />
+                            <point x="0.0752688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Color2" sid="457011119164237">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="Color1" sid="931394079625050">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Button_Play" sid="657975734576407">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116290250774862" speed="5">
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501832">
+                        <collision-poly>
+                            <point x="0.150183" y="0.150183" />
+                            <point x="0.498168" y="0" />
+                            <point x="0.849817" y="0.150183" />
+                            <point x="1" y="0.498168" />
+                            <point x="0.849817" y="0.849817" />
+                            <point x="0.498168" y="1" />
+                            <point x="0.150183" y="0.849817" />
+                            <point x="0" y="0.498168" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button_Help" sid="141737282939863">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="556615047907254" speed="5">
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501832" original-source="D:\Users\TORMOzZ\Мои документы\Few Adventure\Help.png">
+                        <collision-poly>
+                            <point x="0.150183" y="0.150183" />
+                            <point x="0.498168" y="0" />
+                            <point x="0.849817" y="0.150183" />
+                            <point x="1" y="0.498168" />
+                            <point x="0.849817" y="0.849817" />
+                            <point x="0.498168" y="1" />
+                            <point x="0.150183" y="0.849817" />
+                            <point x="0" y="0.498168" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button_Options" sid="482709674440469">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488630059923372" speed="5">
+                    <frame duration="1" hotspotX="0.501832" hotspotY="0.501832" original-source="D:\Users\TORMOzZ\Мои документы\Few Adventure\Options.png">
+                        <collision-poly>
+                            <point x="0.150183" y="0.150183" />
+                            <point x="0.498168" y="0" />
+                            <point x="0.849817" y="0.150183" />
+                            <point x="1" y="0.498168" />
+                            <point x="0.849817" y="0.849817" />
+                            <point x="0.498168" y="1" />
+                            <point x="0.150183" y="0.849817" />
+                            <point x="0" y="0.498168" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text4" sid="108268992531349">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="344213182674505">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6" sid="675810386379244">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="547823596858729">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="CocoonJS" sid="518916329122698">
+            <plugin id="CJSAds" />
+        </object-type>
+        <object-type name="LocalStorage" sid="184028623471781">
+            <plugin id="LocalStorage" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>control.xml</layout>
+        <layout>Menue.xml</layout>
+        <layout>Help.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Ev_control.xml</event-sheet>
+        <event-sheet>Ev_Menue.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Touch" uid="58">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="CocoonJS" uid="59">
+            <properties>
+                <physics-engine>Accelerated</physics-engine>
+                <store-mode>Managed</store-mode>
+                <leaderboards-service>None</leaderboards-service>
+                <store-sandbox>Enabled</store-sandbox>
+                <google-play-games-clientid></google-play-games-clientid>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="60" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
